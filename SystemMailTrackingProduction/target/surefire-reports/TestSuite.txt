@@ -1,0 +1,73 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 7, Errors: 0, Skipped: 0, Time elapsed: 393.99 sec <<< FAILURE! - in TestSuite
+ForgotPasswordTest(SystemMailTracking.testcases.SessionSuite.ForgotPasswordTestCase)  Time elapsed: 5.033 sec  <<< FAILURE!
+java.lang.reflect.InvocationTargetException
+	at SystemMailTracking.testcases.SessionSuite.ForgotPasswordTestCase.ForgotPasswordTest(ForgotPasswordTestCase.java:28)
+Caused by: org.openqa.selenium.WebDriverException: 
+unknown error: cannot determine loading status
+from unknown error: cannot determine loading status
+from disconnected: Unable to receive message from renderer
+  (Session info: chrome=67.0.3396.99)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'DESKTOP-TU76DCC', ip: '192.168.0.102', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\Users\RASHMI~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 67.0.3396.99, webStorageEnabled: true}
+Session ID: 451e583f9c4a6b7273eef85266322200
+	at SystemMailTracking.testcases.SessionSuite.ForgotPasswordTestCase.ForgotPasswordTest(ForgotPasswordTestCase.java:28)
+
+ContinueToPayment(SystemMailTracking.testcases.SessionSuite.ContinueToPaymentTest)  Time elapsed: 45.884 sec  <<< FAILURE!
+java.lang.reflect.InvocationTargetException
+	at SystemMailTracking.testcases.SessionSuite.ContinueToPaymentTest.ContinueToPayment(ContinueToPaymentTest.java:24)
+Caused by: java.lang.AssertionError: 
+The following asserts failed:
+	Object Not Found BillingInfoPostalCode_xpath,
+	Failed to do successful payment during account creation
+	at SystemMailTracking.testcases.SessionSuite.ContinueToPaymentTest.ContinueToPayment(ContinueToPaymentTest.java:24)
+
+deletepaiduserTest(SystemMailTracking.testcases.SessionSuite.deletepaiduser)  Time elapsed: 44.917 sec  <<< FAILURE!
+java.lang.reflect.InvocationTargetException
+	at SystemMailTracking.testcases.SessionSuite.deletepaiduser.deletepaiduserTest(deletepaiduser.java:24)
+Caused by: java.lang.AssertionError: 
+The following asserts failed:
+	Object Not Found DeleteUserButton_xpath,
+	Failed to delete the trial user
+	at SystemMailTracking.testcases.SessionSuite.deletepaiduser.deletepaiduserTest(deletepaiduser.java:24)
+
+AddNewContactOptin(SystemMailTracking.testcases.SystemEmails.AddNewContactOptinTest)  Time elapsed: 27.228 sec  <<< FAILURE!
+java.lang.reflect.InvocationTargetException
+	at SystemMailTracking.testcases.SystemEmails.AddNewContactOptinTest.AddNewContactOptin(AddNewContactOptinTest.java:27)
+Caused by: java.lang.AssertionError: 
+The following asserts failed:
+	Values Dont match. Got value as This contact email is already in your contact list. Please manage the existing contact record rather than creating a new one,
+	Failed to Create a new contact
+	at SystemMailTracking.testcases.SystemEmails.AddNewContactOptinTest.AddNewContactOptin(AddNewContactOptinTest.java:27)
+
+ReoptinEmail(SystemMailTracking.testcases.SystemEmails.ReoptinEmailTest)  Time elapsed: 40.028 sec  <<< FAILURE!
+java.lang.reflect.InvocationTargetException
+	at SystemMailTracking.testcases.SystemEmails.ReoptinEmailTest.ReoptinEmail(ReoptinEmailTest.java:27)
+Caused by: java.lang.AssertionError: 
+The following asserts failed:
+	Failed to search the newly added contact
+	at SystemMailTracking.testcases.SystemEmails.ReoptinEmailTest.ReoptinEmail(ReoptinEmailTest.java:27)
+
+ResourceEmail(SystemMailTracking.testcases.SystemEmails.ResourceEmailTest)  Time elapsed: 56.106 sec  <<< FAILURE!
+java.lang.reflect.InvocationTargetException
+	at SystemMailTracking.testcases.SystemEmails.ResourceEmailTest.ResourceEmail(ResourceEmailTest.java:24)
+Caused by: java.lang.AssertionError: 
+The following asserts failed:
+	Object Not Found GmailInboxclick_xpath,
+	Failed to receive Resource email
+	at SystemMailTracking.testcases.SystemEmails.ResourceEmailTest.ResourceEmail(ResourceEmailTest.java:24)
+
+BroadCastEmail(SystemMailTracking.testcases.SystemEmails.BroadCastEmailTest)  Time elapsed: 24.389 sec  <<< FAILURE!
+java.lang.reflect.InvocationTargetException
+	at SystemMailTracking.testcases.SystemEmails.BroadCastEmailTest.BroadCastEmail(BroadCastEmailTest.java:27)
+Caused by: java.lang.AssertionError: 
+The following asserts failed:
+	Object Not Found userName_xpath
+	at SystemMailTracking.testcases.SystemEmails.BroadCastEmailTest.BroadCastEmail(BroadCastEmailTest.java:27)
+

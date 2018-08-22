@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" ignored="0" total="9" passed="8">
+  <reporter-output>
+  </reporter-output>
+  <suite name="My suite" duration-ms="0" started-at="2018-08-21T14:12:15Z" finished-at="2018-08-21T14:12:15Z">
+    <groups>
+    </groups>
+  </suite> <!-- My suite -->
+  <suite name="SessionSuite" duration-ms="203348" started-at="2018-08-21T14:04:22Z" finished-at="2018-08-21T14:07:45Z">
+    <groups>
+    </groups>
+    <test name="Login Test" duration-ms="13663" started-at="2018-08-21T14:04:22Z" finished-at="2018-08-21T14:04:35Z">
+      <class name="SystemMailTracking.testcases.SessionSuite.LoginTest">
+        <test-method status="PASS" signature="init()[pri:0, instance:SystemMailTracking.testcases.SessionSuite.LoginTest@239963d8]" name="init" is-config="true" duration-ms="595" started-at="2018-08-21T14:04:22Z" finished-at="2018-08-21T14:04:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="initTest()[pri:0, instance:SystemMailTracking.testcases.SessionSuite.LoginTest@239963d8]" name="initTest" is-config="true" duration-ms="106" started-at="2018-08-21T14:04:22Z" finished-at="2018-08-21T14:04:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initTest -->
+        <test-method status="PASS" signature="loginTest(java.util.Hashtable)[pri:0, instance:SystemMailTracking.testcases.SessionSuite.LoginTest@239963d8]" name="loginTest" duration-ms="11858" started-at="2018-08-21T14:04:22Z" data-provider="getData" finished-at="2018-08-21T14:04:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Username=Automationdonotuse@mailinator.com, ExpectedResult=Success, Password=r123456789, Runmode=Y, Browser=Chrome}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:SystemMailTracking.testcases.SessionSuite.LoginTest@239963d8]" name="quit" is-config="true" duration-ms="1085" started-at="2018-08-21T14:04:34Z" finished-at="2018-08-21T14:04:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- SystemMailTracking.testcases.SessionSuite.LoginTest -->
+    </test> <!-- Login Test -->
+    <test name="ForgotPassword" duration-ms="69232" started-at="2018-08-21T14:04:35Z" finished-at="2018-08-21T14:05:45Z">
+      <class name="SystemMailTracking.testcases.SessionSuite.ForgotPasswordTestCase">
+        <test-method status="PASS" signature="init()[pri:0, instance:SystemMailTracking.testcases.SessionSuite.ForgotPasswordTestCase@ff5b51f]" name="init" is-config="true" duration-ms="47" started-at="2018-08-21T14:04:35Z" finished-at="2018-08-21T14:04:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="ForgotPasswordTest(java.util.Hashtable)[pri:0, instance:SystemMailTracking.testcases.SessionSuite.ForgotPasswordTestCase@ff5b51f]" name="ForgotPasswordTest" duration-ms="68325" started-at="2018-08-21T14:04:35Z" data-provider="getData" finished-at="2018-08-21T14:05:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{NewPassword=r123456789, Runmode=Y, ConfirmPassword=r123456789, ValidateText=An email has been sent to your email account with instructions to reset your password. Please check Junk/Spam folders for this message and wait up to 10 minutes for it., Email=Automationdonotuse@mailinator.com, Browser=Chrome}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ForgotPasswordTest -->
+        <test-method status="PASS" signature="initTest()[pri:0, instance:SystemMailTracking.testcases.SessionSuite.ForgotPasswordTestCase@ff5b51f]" name="initTest" is-config="true" duration-ms="0" started-at="2018-08-21T14:04:35Z" finished-at="2018-08-21T14:04:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initTest -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:SystemMailTracking.testcases.SessionSuite.ForgotPasswordTestCase@ff5b51f]" name="quit" is-config="true" duration-ms="857" started-at="2018-08-21T14:05:44Z" finished-at="2018-08-21T14:05:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- SystemMailTracking.testcases.SessionSuite.ForgotPasswordTestCase -->
+    </test> <!-- ForgotPassword -->
+    <test name="CreateNewAccount" duration-ms="56660" started-at="2018-08-21T14:05:45Z" finished-at="2018-08-21T14:06:41Z">
+      <class name="SystemMailTracking.testcases.SessionSuite.CreateNewAccountTest">
+        <test-method status="PASS" signature="init()[pri:0, instance:SystemMailTracking.testcases.SessionSuite.CreateNewAccountTest@29ca901e]" name="init" is-config="true" duration-ms="52" started-at="2018-08-21T14:05:45Z" finished-at="2018-08-21T14:05:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="FAIL" signature="CreateNewAccount(java.util.Hashtable)[pri:0, instance:SystemMailTracking.testcases.SessionSuite.CreateNewAccountTest@29ca901e]" name="CreateNewAccount" duration-ms="55809" started-at="2018-08-21T14:05:45Z" data-provider="getData" finished-at="2018-08-21T14:06:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{ConfirmPassword=123456, RepId2=TestRep2, RepId1=TestRep1, Runmode=Y, Phone=9658877498, Additional Notification Email=Additionnotif@mailinator.com, Email=Autonewuser1@mailinator.com, Password=123456, groupcode=TG1, LastName=New Account, FirstName=Automation, Browser=Chrome}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.reflect.InvocationTargetException">
+            <full-stacktrace>
+              <![CDATA[java.lang.reflect.InvocationTargetException
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at SystemMailTracking.driver.DriverScript.executeKeywords(DriverScript.java:49)
+at SystemMailTracking.testcases.SessionSuite.CreateNewAccountTest.CreateNewAccount(CreateNewAccountTest.java:27)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1204)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.AssertionError: The following asserts failed:
+Failed to get the email confirmation for newly created account
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
+at SystemMailTracking.keywords.GenericKeywords.reportFailure(GenericKeywords.java:362)
+at SystemMailTracking.keywords.AppKeywords.VerifyEmailFromInboxNewAccount(AppKeywords.java:323)
+... 32 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.reflect.InvocationTargetException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateNewAccount -->
+        <test-method status="PASS" signature="initTest()[pri:0, instance:SystemMailTracking.testcases.SessionSuite.CreateNewAccountTest@29ca901e]" name="initTest" is-config="true" duration-ms="0" started-at="2018-08-21T14:05:45Z" finished-at="2018-08-21T14:05:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initTest -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:SystemMailTracking.testcases.SessionSuite.CreateNewAccountTest@29ca901e]" name="quit" is-config="true" duration-ms="795" started-at="2018-08-21T14:06:41Z" finished-at="2018-08-21T14:06:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- SystemMailTracking.testcases.SessionSuite.CreateNewAccountTest -->
+    </test> <!-- CreateNewAccount -->
+    <test name="deleteTrialuser" duration-ms="63623" started-at="2018-08-21T14:06:41Z" finished-at="2018-08-21T14:07:45Z">
+      <class name="SystemMailTracking.testcases.SessionSuite.deleteTrialuser">
+        <test-method status="PASS" signature="init()[pri:0, instance:SystemMailTracking.testcases.SessionSuite.deleteTrialuser@64bfbc86]" name="init" is-config="true" duration-ms="64" started-at="2018-08-21T14:06:41Z" finished-at="2018-08-21T14:06:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="initTest()[pri:0, instance:SystemMailTracking.testcases.SessionSuite.deleteTrialuser@64bfbc86]" name="initTest" is-config="true" duration-ms="0" started-at="2018-08-21T14:06:41Z" finished-at="2018-08-21T14:06:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initTest -->
+        <test-method status="PASS" signature="deleteTrialuserTest(java.util.Hashtable)[pri:0, instance:SystemMailTracking.testcases.SessionSuite.deleteTrialuser@64bfbc86]" name="deleteTrialuserTest" duration-ms="62783" started-at="2018-08-21T14:06:41Z" data-provider="getData" finished-at="2018-08-21T14:07:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Account Name=Test Production ABC's, Runmode=Y, Email=Autonewuser1@mailinator.com, Browser=Chrome}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteTrialuserTest -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:SystemMailTracking.testcases.SessionSuite.deleteTrialuser@64bfbc86]" name="quit" is-config="true" duration-ms="769" started-at="2018-08-21T14:07:44Z" finished-at="2018-08-21T14:07:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- SystemMailTracking.testcases.SessionSuite.deleteTrialuser -->
+    </test> <!-- deleteTrialuser -->
+  </suite> <!-- SessionSuite -->
+  <suite name="SystemEmails" duration-ms="269214" started-at="2018-08-21T14:07:45Z" finished-at="2018-08-21T14:12:14Z">
+    <groups>
+    </groups>
+    <test name="Send Optin Email" duration-ms="60169" started-at="2018-08-21T14:07:45Z" finished-at="2018-08-21T14:08:45Z">
+      <class name="SystemMailTracking.testcases.SystemEmails.AddNewContactOptinTest">
+        <test-method status="PASS" signature="init()[pri:0, instance:SystemMailTracking.testcases.SystemEmails.AddNewContactOptinTest@617faa95]" name="init" is-config="true" duration-ms="146" started-at="2018-08-21T14:07:45Z" finished-at="2018-08-21T14:07:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="initTest()[pri:0, instance:SystemMailTracking.testcases.SystemEmails.AddNewContactOptinTest@617faa95]" name="initTest" is-config="true" duration-ms="0" started-at="2018-08-21T14:07:45Z" finished-at="2018-08-21T14:07:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initTest -->
+        <test-method status="PASS" signature="AddNewContactOptin(java.util.Hashtable)[pri:0, instance:SystemMailTracking.testcases.SystemEmails.AddNewContactOptinTest@617faa95]" name="AddNewContactOptin" duration-ms="59250" started-at="2018-08-21T14:07:45Z" data-provider="getData" finished-at="2018-08-21T14:08:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Note=AutoNote, Tag=Auto, ExpectedText=Data saved successfully., Runmode=Y, CompanyName=RapidFunnel, Phone=9658820667, Email=automationcontact1@mailinator.com, Title=Mr., LastName=Contact, City=AutoCity, FirstName=Automation, Address2=AutoAdd2, Address1=AutoAdd1, PostalCode=751016, Browser=Chrome}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddNewContactOptin -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:SystemMailTracking.testcases.SystemEmails.AddNewContactOptinTest@617faa95]" name="quit" is-config="true" duration-ms="771" started-at="2018-08-21T14:08:44Z" finished-at="2018-08-21T14:08:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- SystemMailTracking.testcases.SystemEmails.AddNewContactOptinTest -->
+    </test> <!-- Send Optin Email -->
+    <test name="Resend Optin Email" duration-ms="43686" started-at="2018-08-21T14:08:45Z" finished-at="2018-08-21T14:09:29Z">
+      <class name="SystemMailTracking.testcases.SystemEmails.ReoptinEmailTest">
+        <test-method status="PASS" signature="init()[pri:0, instance:SystemMailTracking.testcases.SystemEmails.ReoptinEmailTest@21213b92]" name="init" is-config="true" duration-ms="37" started-at="2018-08-21T14:08:45Z" finished-at="2018-08-21T14:08:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="initTest()[pri:0, instance:SystemMailTracking.testcases.SystemEmails.ReoptinEmailTest@21213b92]" name="initTest" is-config="true" duration-ms="0" started-at="2018-08-21T14:08:45Z" finished-at="2018-08-21T14:08:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initTest -->
+        <test-method status="PASS" signature="ReoptinEmail(java.util.Hashtable)[pri:0, instance:SystemMailTracking.testcases.SystemEmails.ReoptinEmailTest@21213b92]" name="ReoptinEmail" duration-ms="42921" started-at="2018-08-21T14:08:45Z" data-provider="getData" finished-at="2018-08-21T14:09:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Password=r123456789, Runmode=Y, UserName=Automationdonotuse@mailinator.com, Email=automationcontact1@mailinator.com, Browser=Chrome}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ReoptinEmail -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:SystemMailTracking.testcases.SystemEmails.ReoptinEmailTest@21213b92]" name="quit" is-config="true" duration-ms="727" started-at="2018-08-21T14:09:28Z" finished-at="2018-08-21T14:09:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- SystemMailTracking.testcases.SystemEmails.ReoptinEmailTest -->
+    </test> <!-- Resend Optin Email -->
+    <test name="Send Resource Email" duration-ms="57846" started-at="2018-08-21T14:09:29Z" finished-at="2018-08-21T14:10:27Z">
+      <class name="SystemMailTracking.testcases.SystemEmails.ResourceEmailTest">
+        <test-method status="PASS" signature="init()[pri:0, instance:SystemMailTracking.testcases.SystemEmails.ResourceEmailTest@5ec0a365]" name="init" is-config="true" duration-ms="55" started-at="2018-08-21T14:09:29Z" finished-at="2018-08-21T14:09:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="initTest()[pri:0, instance:SystemMailTracking.testcases.SystemEmails.ResourceEmailTest@5ec0a365]" name="initTest" is-config="true" duration-ms="0" started-at="2018-08-21T14:09:29Z" finished-at="2018-08-21T14:09:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initTest -->
+        <test-method status="PASS" signature="ResourceEmail(java.util.Hashtable)[pri:0, instance:SystemMailTracking.testcases.SystemEmails.ResourceEmailTest@5ec0a365]" name="ResourceEmail" duration-ms="57010" started-at="2018-08-21T14:09:29Z" data-provider="getData" finished-at="2018-08-21T14:10:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{GmailPassword=password@12, Password=r123456789, Runmode=Y, UserName=Automationdonotuse@mailinator.com, Email=xponoacc@gmail.com, Browser=Chrome}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ResourceEmail -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:SystemMailTracking.testcases.SystemEmails.ResourceEmailTest@5ec0a365]" name="quit" is-config="true" duration-ms="779" started-at="2018-08-21T14:10:26Z" finished-at="2018-08-21T14:10:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- SystemMailTracking.testcases.SystemEmails.ResourceEmailTest -->
+    </test> <!-- Send Resource Email -->
+    <test name="Broadcast Email" duration-ms="63584" started-at="2018-08-21T14:10:27Z" finished-at="2018-08-21T14:11:30Z">
+      <class name="SystemMailTracking.testcases.SystemEmails.BroadCastEmailTest">
+        <test-method status="PASS" signature="init()[pri:0, instance:SystemMailTracking.testcases.SystemEmails.BroadCastEmailTest@5abca1e0]" name="init" is-config="true" duration-ms="41" started-at="2018-08-21T14:10:27Z" finished-at="2018-08-21T14:10:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="initTest()[pri:0, instance:SystemMailTracking.testcases.SystemEmails.BroadCastEmailTest@5abca1e0]" name="initTest" is-config="true" duration-ms="1" started-at="2018-08-21T14:10:27Z" finished-at="2018-08-21T14:10:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initTest -->
+        <test-method status="PASS" signature="BroadCastEmail(java.util.Hashtable)[pri:0, instance:SystemMailTracking.testcases.SystemEmails.BroadCastEmailTest@5abca1e0]" name="BroadCastEmail" duration-ms="62530" started-at="2018-08-21T14:10:27Z" data-provider="getData" finished-at="2018-08-21T14:11:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{GmailPassword=password@12, BroadCastEmailTextContent=Test Content Automation, BroadcastEmailAddress=xponoacc@gmail.com, SentEmailFrom=Rfsupporttest@mailinator.com, Runmode=Y, BroadCastEmailSubject=Test Automation Subject, BroadCastEmailContent=Test Automation Content, Browser=Chrome}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BroadCastEmail -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:SystemMailTracking.testcases.SystemEmails.BroadCastEmailTest@5abca1e0]" name="quit" is-config="true" duration-ms="1011" started-at="2018-08-21T14:11:29Z" finished-at="2018-08-21T14:11:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- SystemMailTracking.testcases.SystemEmails.BroadCastEmailTest -->
+    </test> <!-- Broadcast Email -->
+    <test name="Delete Contact" duration-ms="43862" started-at="2018-08-21T14:11:30Z" finished-at="2018-08-21T14:12:14Z">
+      <class name="SystemMailTracking.testcases.SystemEmails.deletecontact">
+        <test-method status="PASS" signature="init()[pri:0, instance:SystemMailTracking.testcases.SystemEmails.deletecontact@5f9d02cb]" name="init" is-config="true" duration-ms="128" started-at="2018-08-21T14:11:30Z" finished-at="2018-08-21T14:11:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="initTest()[pri:0, instance:SystemMailTracking.testcases.SystemEmails.deletecontact@5f9d02cb]" name="initTest" is-config="true" duration-ms="0" started-at="2018-08-21T14:11:30Z" finished-at="2018-08-21T14:11:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initTest -->
+        <test-method status="PASS" signature="deletecontactTest(java.util.Hashtable)[pri:0, instance:SystemMailTracking.testcases.SystemEmails.deletecontact@5f9d02cb]" name="deletecontactTest" duration-ms="42956" started-at="2018-08-21T14:11:30Z" data-provider="getData" finished-at="2018-08-21T14:12:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Runmode=Y, Email=automationcontact1@mailinator.com, Browser=Chrome}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deletecontactTest -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:SystemMailTracking.testcases.SystemEmails.deletecontact@5f9d02cb]" name="quit" is-config="true" duration-ms="775" started-at="2018-08-21T14:12:13Z" finished-at="2018-08-21T14:12:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- SystemMailTracking.testcases.SystemEmails.deletecontact -->
+    </test> <!-- Delete Contact -->
+  </suite> <!-- SystemEmails -->
+</testng-results>
