@@ -122,7 +122,9 @@ public class AppKeywords extends GenericKeywords{
 		{
 			test.log(Status.INFO, "Validating forgot password email in mailinator");
 			type("MailinatorMailinput_xpath","Email");
+			waitForPageToLoad();
 			click("MailinatorGoButton_xpath");
+			waitForPageToLoad();
 			click("MailinatorInbox_xpath");
 			Thread.sleep(2000);
 			click("MailinatorForgotPasswordMail_xpath");
@@ -137,6 +139,7 @@ public class AppKeywords extends GenericKeywords{
 			driver.switchTo().window(newTab.get(1));
 			Thread.sleep(5000);
 			test.log(Status.INFO, "Validating Reset password");
+			waitForPageToLoad();
 			type("ResetNewPassword_xpath","NewPassword");
 			type("ResetConfirmPassword_xpath","ConfirmPassword");
 			click("ResetSaveButton_xpath");
@@ -304,7 +307,9 @@ public class AppKeywords extends GenericKeywords{
 		{
 		test.log(Status.INFO, "Validating Newly created account confirmation link has been emailed in mailinator");
 		type("MailinatorMailinput_xpath","Email");
+		waitForPageToLoad();
 		click("MailinatorGoButton_xpath");
+		waitForPageToLoad();
 		click("MailinatorInbox_xpath");
 		String Count = driver.findElement(By.xpath("//*[@id='InboxCtrl']/section/div/div[2]/ul/li[1]/ul/li[1]//div[@class='ng-binding']")).getText();
 		if(Count != null)
@@ -623,7 +628,7 @@ public class AppKeywords extends GenericKeywords{
 			waitForPageToLoad();
 			type("RFSearchAccounts_xpath","Account Name");
 			waitForPageToLoad();
-			Thread.sleep(10000);
+			Thread.sleep(15000);
 			click("RFAccountUsersIcon_xpath");
 			click("RFAccountManageUserButton_xpath");
 			waitForPageToLoad();
