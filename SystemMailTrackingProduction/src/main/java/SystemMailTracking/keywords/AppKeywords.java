@@ -125,7 +125,10 @@ public class AppKeywords extends GenericKeywords{
 			waitForPageToLoad();
 			click("MailinatorGoButton_xpath");
 			waitForPageToLoad();
-			click("MailinatorInbox_xpath");
+			type("Mailinatormailinput_xpath","Email");
+			click("MailinatorfilterinboxmailButton_xpath");
+			waitForPageToLoad();
+			click("MailinatorResetPasswordLink_xpath");
 			Thread.sleep(2000);
 			click("MailinatorForgotPasswordMail_xpath");
 			
@@ -159,7 +162,10 @@ public class AppKeywords extends GenericKeywords{
 		test.log(Status.INFO, "Validating forgot password email in mailinator");
 		type("MailinatorMailinput_xpath","Email");
 		click("MailinatorGoButton_xpath");
-		click("MailinatorInbox_xpath");
+		waitForPageToLoad();
+		type("Mailinatormailinput_xpath","Email");
+		click("MailinatorfilterinboxmailButton_xpath");
+		click("MailinatorResetPasswordLink_xpath");
 		Thread.sleep(5000);
 		String Password_Changed = driver.findElement(By.xpath("//*[@class='single_mail']//ul/li[1]/div/div[4]")).getText();
 		test.log(Status.INFO, "Reset Password Notification sent successfully with Subject : " + Password_Changed);
@@ -310,7 +316,10 @@ public class AppKeywords extends GenericKeywords{
 		waitForPageToLoad();
 		click("MailinatorGoButton_xpath");
 		waitForPageToLoad();
-		click("MailinatorInbox_xpath");
+		type("Mailinatormailinput_xpath","Email");
+		click("MailinatorfilterinboxmailButton_xpath");
+		waitForPageToLoad();
+		click("MailinatorAccountmail_xpath");
 		String Count = driver.findElement(By.xpath("//*[@id='InboxCtrl']/section/div/div[2]/ul/li[1]/ul/li[1]//div[@class='ng-binding']")).getText();
 		if(Count != null)
 		{
@@ -360,8 +369,8 @@ public class AppKeywords extends GenericKeywords{
  		type("ContactTitle_xpath","Title");
 		
 		//Using AutoIt uploaded the image of the contact.
-		driver.findElement(By.xpath("//label[text()='Choose a Picture']")).click();
-		Runtime.getRuntime().exec("D:\\FileUpload.exe");
+		//driver.findElement(By.xpath("//label[text()='Choose a Picture']")).click();
+		//Runtime.getRuntime().exec("D:\\FileUpload.exe");
 		Thread.sleep(5000);
 		
 		//Select the Rating as '2 Star' from the dropdowwn
@@ -404,7 +413,10 @@ public class AppKeywords extends GenericKeywords{
 		type("MailinatorMailinput_xpath","Email");
 		click("MailinatorGoButton_xpath");
 		waitForPageToLoad();
-		click("MailinatorInbox_xpath");
+		type("Mailinatormailinput_xpath","Email");
+		click("MailinatorfilterinboxmailButton_xpath");
+		waitForPageToLoad();
+		click("MailinatorContactInbox_xpath");
 		Thread.sleep(5000);
 		String Optin_Mail = driver.findElement(By.xpath("//*[@id='InboxCtrl']/section/div/div[2]/ul/li[1]/ul/li[1]/div/div[2]")).getText();
 		System.out.println("Optin email has been sent as in the mailinator there are " + Optin_Mail + " email");
@@ -462,10 +474,13 @@ public class AppKeywords extends GenericKeywords{
 		type("MailinatorMailinput_xpath","Email");
 		click("MailinatorGoButton_xpath");
 		waitForPageToLoad();
-		click("MailinatorInbox_xpath");
+		type("Mailinatormailinput_xpath","Email");
+		click("MailinatorfilterinboxmailButton_xpath");
+		click("MailinatorContactInbox_xpath");
 		Thread.sleep(5000);
-		String Reoptin_Mail=driver.findElement(By.xpath("//*[@id='InboxCtrl']/section/div/div[2]/ul/li/ul/li/div/div[2]")).getText();
-		System.out.println("Reoptin email has been sent as in the mailinator there are  " + Reoptin_Mail + " emails");
+		click("MailinatorInboxMail_xpath");
+		//String Reoptin_Mail=driver.findElement(By.xpath("//*[@id='InboxCtrl']/section/div/div[2]/ul/li[1]/ul/li/div/div[2]")).getText();
+		//System.out.println("Reoptin email has been sent as in the mailinator there are  " + Reoptin_Mail + " emails");
 		/*if(Reoptin_Mail.equals(1))
 			test.log(Status.INFO, "Re-Optin email has been sent successfully");
 		else
@@ -513,8 +528,8 @@ public class AppKeywords extends GenericKeywords{
 		type("GmailPassword_xpath","GmailPassword");
 		click("GmailPasswordNextButton_xpath");
 		Thread.sleep(5000);
-		click("GmailInboxclick_xpath");
-		Thread.sleep(5000);
+		//click("GmailInboxclick_xpath");
+		//Thread.sleep(5000);
 		click("GmailInboxFirstMessage_xpath");
 		/*type("MailinatorMailinput_xpath","Email");
 		click("MailinatorGoButton_xpath");
@@ -580,8 +595,8 @@ public class AppKeywords extends GenericKeywords{
 			type("GmailPassword_xpath","GmailPassword");
 			click("GmailPasswordNextButton_xpath");
 			Thread.sleep(5000);
-			click("GmailInboxclick_xpath");
-			Thread.sleep(5000);
+			//click("GmailInboxclick_xpath");
+			//Thread.sleep(5000);
 			click("GmailInboxFirstMessage_xpath");
 			/*click("GmailInboxclick_xpath");
 			Thread.sleep(5000);

@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">3 suites, 1 failed test</span>
+      <span class="top-banner-font-1">3 suites</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-SessionSuite">
-              <span class="suite-name border-failed">SessionSuite</span>
+              <span class="suite-name border-passed">SessionSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-SessionSuite">
-                    <span>D:\My Doc\new\Copy of SystemMailTracking\src\test\resources\SessionSuite.xml</span>
+                    <span>D:\My Doc\new\SystemMailTrackingProduction\src\test\resources\SessionSuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,21 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-SessionSuite" class="hide-methods failed suite-SessionSuite"> (hide)</a> <!-- hide-methods failed suite-SessionSuite -->
-                      <a href="#" panel-name="suite-SessionSuite" class="show-methods failed suite-SessionSuite"> (show)</a> <!-- show-methods failed suite-SessionSuite -->
-                    </span>
-                    <div class="method-list-content failed suite-SessionSuite">
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-SessionSuite" title="SystemMailTracking.testcases.SessionSuite.CreateNewAccountTest" hash-for-method="CreateNewAccount({ConfirmPassword=123456, RepId2=TestRep2, RepId1=TestRep1, Runmode=Y, Phone=9658877498, Additional N...)">CreateNewAccount({ConfirmPassword=123456, RepId2=TestRep2, RepId1=TestRep1, Runmode=Y, Phone=9658877498, Additional N...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-SessionSuite -->
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -114,6 +100,11 @@
                       <a href="#" panel-name="suite-SessionSuite" class="show-methods passed suite-SessionSuite"> (show)</a> <!-- show-methods passed suite-SessionSuite -->
                     </span>
                     <div class="method-list-content passed suite-SessionSuite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-SessionSuite" title="SystemMailTracking.testcases.SessionSuite.CreateNewAccountTest" hash-for-method="CreateNewAccount({ConfirmPassword=123456, RepId2=TestRep2, RepId1=TestRep1, Runmode=Y, Phone=9658877498, Additional N...)">CreateNewAccount({ConfirmPassword=123456, RepId2=TestRep2, RepId1=TestRep1, Runmode=Y, Phone=9658877498, Additional N...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-SessionSuite" title="SystemMailTracking.testcases.SessionSuite.ForgotPasswordTestCase" hash-for-method="ForgotPasswordTest({NewPassword=r123456789, Runmode=Y, ConfirmPassword=r123456789, ValidateText=An email has been sent ...)">ForgotPasswordTest({NewPassword=r123456789, Runmode=Y, ConfirmPassword=r123456789, ValidateText=An email has been sent ...)</a> <!-- method navigator-link -->
@@ -152,7 +143,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-SystemEmails">
-                    <span>D:\My Doc\new\Copy of SystemMailTracking\src\test\resources\SystemEmails.xml</span>
+                    <span>D:\My Doc\new\SystemMailTrackingProduction\src\test\resources\SystemEmails.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -242,9 +233,9 @@
         <div panel-name="suite-My_suite" class="panel My_suite">
         </div> <!-- panel My_suite -->
         <div panel-name="suite-SessionSuite" class="panel SessionSuite">
-          <div class="suite-SessionSuite-class-failed">
+          <div class="suite-SessionSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">SystemMailTracking.testcases.SessionSuite.CreateNewAccountTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -254,20 +245,10 @@
                   </a> <!-- CreateNewAccount({ConfirmPassword=123456, RepId2=TestRep2, RepId1=TestRep1, Runmode=Y, Phone=9658877498, Additional N...) -->
                   <span class="method-name">CreateNewAccount</span>
                   <span class="parameters">({ConfirmPassword=123456, RepId2=TestRep2, RepId1=TestRep1, Runmode=Y, Phone=9658877498, Additional Notification Email=Additionnotif@mailinator.com, Email=Autonewuser1@mailinator.com, Password=123456, groupcode=TG1, LastName=New Account, FirstName=Automation, Browser=Chrome})</span>
-                  <div class="stack-trace">java.lang.reflect.InvocationTargetException
-	at SystemMailTracking.driver.DriverScript.executeKeywords(DriverScript.java:49)
-	at SystemMailTracking.testcases.SessionSuite.CreateNewAccountTest.CreateNewAccount(CreateNewAccountTest.java:27)
-Caused by: java.lang.AssertionError: The following asserts failed:
-	Failed to get the email confirmation for newly created account
-	at SystemMailTracking.keywords.GenericKeywords.reportFailure(GenericKeywords.java:362)
-	at SystemMailTracking.keywords.AppKeywords.VerifyEmailFromInboxNewAccount(AppKeywords.java:323)
-	... 32 more
-... Removed 31 stack frames
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-SessionSuite-class-failed -->
+          </div> <!-- suite-SessionSuite-class-passed -->
           <div class="suite-SessionSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -401,7 +382,7 @@ Caused by: java.lang.AssertionError: The following asserts failed:
         </div> <!-- panel SystemEmails -->
         <div panel-name="test-xml-My_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">D:\My Doc\new\Copy of SystemMailTracking\src\test\resources\testng.xml</span>
+            <span class="header-content">D:\My Doc\new\SystemMailTrackingProduction\src\test\resources\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -418,7 +399,7 @@ Caused by: java.lang.AssertionError: The following asserts failed:
         </div> <!-- panel -->
         <div panel-name="test-xml-SessionSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">D:\My Doc\new\Copy of SystemMailTracking\src\test\resources\SessionSuite.xml</span>
+            <span class="header-content">D:\My Doc\new\SystemMailTrackingProduction\src\test\resources\SessionSuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -451,7 +432,7 @@ Caused by: java.lang.AssertionError: The following asserts failed:
         </div> <!-- panel -->
         <div panel-name="test-xml-SystemEmails" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">D:\My Doc\new\Copy of SystemMailTracking\src\test\resources\SystemEmails.xml</span>
+            <span class="header-content">D:\My Doc\new\SystemMailTrackingProduction\src\test\resources\SystemEmails.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -602,21 +583,21 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'ForgotPasswordTest')
-data.setCell(0, 2, 'SystemMailTracking.testcases.SessionSuite.ForgotPasswordTestCase')
-data.setCell(0, 3, 68325);
+data.setCell(0, 1, 'deleteTrialuserTest')
+data.setCell(0, 2, 'SystemMailTracking.testcases.SessionSuite.deleteTrialuser')
+data.setCell(0, 3, 61548);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'deleteTrialuserTest')
-data.setCell(1, 2, 'SystemMailTracking.testcases.SessionSuite.deleteTrialuser')
-data.setCell(1, 3, 62783);
+data.setCell(1, 1, 'CreateNewAccount')
+data.setCell(1, 2, 'SystemMailTracking.testcases.SessionSuite.CreateNewAccountTest')
+data.setCell(1, 3, 54469);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'CreateNewAccount')
-data.setCell(2, 2, 'SystemMailTracking.testcases.SessionSuite.CreateNewAccountTest')
-data.setCell(2, 3, 55809);
+data.setCell(2, 1, 'ForgotPasswordTest')
+data.setCell(2, 2, 'SystemMailTracking.testcases.SessionSuite.ForgotPasswordTestCase')
+data.setCell(2, 3, 54323);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'loginTest')
 data.setCell(3, 2, 'SystemMailTracking.testcases.SessionSuite.LoginTest')
-data.setCell(3, 3, 11858);
+data.setCell(3, 3, 16311);
 window.suiteTableData['SessionSuite']= { tableData: data, tableDiv: 'times-div-SessionSuite'}
 return data;
 }
@@ -645,28 +626,28 @@ data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'BroadCastEmail')
 data.setCell(0, 2, 'SystemMailTracking.testcases.SystemEmails.BroadCastEmailTest')
-data.setCell(0, 3, 62530);
+data.setCell(0, 3, 51393);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'AddNewContactOptin')
 data.setCell(1, 2, 'SystemMailTracking.testcases.SystemEmails.AddNewContactOptinTest')
-data.setCell(1, 3, 59250);
+data.setCell(1, 3, 49603);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'ResourceEmail')
-data.setCell(2, 2, 'SystemMailTracking.testcases.SystemEmails.ResourceEmailTest')
-data.setCell(2, 3, 57010);
+data.setCell(2, 1, 'ReoptinEmail')
+data.setCell(2, 2, 'SystemMailTracking.testcases.SystemEmails.ReoptinEmailTest')
+data.setCell(2, 3, 48678);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'deletecontactTest')
 data.setCell(3, 2, 'SystemMailTracking.testcases.SystemEmails.deletecontact')
-data.setCell(3, 3, 42956);
+data.setCell(3, 3, 41239);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'ReoptinEmail')
-data.setCell(4, 2, 'SystemMailTracking.testcases.SystemEmails.ReoptinEmailTest')
-data.setCell(4, 3, 42921);
+data.setCell(4, 1, 'ResourceEmail')
+data.setCell(4, 2, 'SystemMailTracking.testcases.SystemEmails.ResourceEmailTest')
+data.setCell(4, 3, 40730);
 window.suiteTableData['SystemEmails']= { tableData: data, tableDiv: 'times-div-SystemEmails'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 minutes</span>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
               <div id="times-div-SystemEmails">
               </div> <!-- times-div-SystemEmails -->
             </div> <!-- times-div -->
@@ -734,74 +715,72 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">initTest</span>
-                <span class="method-start">611 ms</span>
+                <span class="method-start">419 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">loginTest({Username=Automationdonotuse@mailinator.com, ExpectedResult=Success, Password=r123456789, Runmode=Y,...)</span>
-                <span class="method-start">717 ms</span>
+                <span class="method-start">544 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">quit</span>
-                <span class="method-start">12576 ms</span>
+                <span class="method-start">16856 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">SystemMailTracking.testcases.SessionSuite.ForgotPasswordTestCase</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">init</span>
-                <span class="method-start">13793 ms</span>
+                <span class="method-start">17762 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">initTest</span>
-                <span class="method-start">13841 ms</span>
+                <span class="method-start">17817 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">ForgotPasswordTest({NewPassword=r123456789, Runmode=Y, ConfirmPassword=r123456789, ValidateText=An email has been sent ...)</span>
-                <span class="method-start">13841 ms</span>
+                <span class="method-start">17818 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">quit</span>
-                <span class="method-start">82168 ms</span>
+                <span class="method-start">72141 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">SystemMailTracking.testcases.SessionSuite.CreateNewAccountTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">init</span>
-                <span class="method-start">83036 ms</span>
+                <span class="method-start">72936 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">initTest</span>
-                <span class="method-start">83090 ms</span>
+                <span class="method-start">72974 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">CreateNewAccount({ConfirmPassword=123456, RepId2=TestRep2, RepId1=TestRep1, Runmode=Y, Phone=9658877498, Additional N...)</span>
-                <span class="method-start">83090 ms</span>
+                <span class="method-start">72974 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">quit</span>
-                <span class="method-start">138900 ms</span>
+                <span class="method-start">127445 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">SystemMailTracking.testcases.SessionSuite.deleteTrialuser</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">init</span>
-                <span class="method-start">139729 ms</span>
+                <span class="method-start">128225 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">initTest</span>
-                <span class="method-start">139794 ms</span>
+                <span class="method-start">128252 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">deleteTrialuserTest({Account Name=Test Production ABC's, Runmode=Y, Email=Autonewuser1@mailinator.com, Browser=Chrome})</span>
-                <span class="method-start">139794 ms</span>
+                <span class="method-start">128252 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">quit</span>
-                <span class="method-start">202578 ms</span>
+                <span class="method-start">189801 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
@@ -818,91 +797,91 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">initTest</span>
-                <span class="method-start">148 ms</span>
+                <span class="method-start">53 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">AddNewContactOptin({Note=AutoNote, Tag=Auto, ExpectedText=Data saved successfully., Runmode=Y, CompanyName=RapidFunnel,...)</span>
-                <span class="method-start">148 ms</span>
+                <span class="method-start">53 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">quit</span>
-                <span class="method-start">59398 ms</span>
+                <span class="method-start">49657 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">SystemMailTracking.testcases.SystemEmails.ReoptinEmailTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">init</span>
-                <span class="method-start">60179 ms</span>
+                <span class="method-start">50376 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">initTest</span>
-                <span class="method-start">60217 ms</span>
+                <span class="method-start">50408 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">ReoptinEmail({Password=r123456789, Runmode=Y, UserName=Automationdonotuse@mailinator.com, Email=automationcontact...)</span>
-                <span class="method-start">60217 ms</span>
+                <span class="method-start">50409 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">quit</span>
-                <span class="method-start">103138 ms</span>
+                <span class="method-start">99089 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">SystemMailTracking.testcases.SystemEmails.ResourceEmailTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">init</span>
-                <span class="method-start">103870 ms</span>
+                <span class="method-start">99867 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">initTest</span>
-                <span class="method-start">103926 ms</span>
+                <span class="method-start">99900 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">ResourceEmail({GmailPassword=password@12, Password=r123456789, Runmode=Y, UserName=Automationdonotuse@mailinator.c...)</span>
-                <span class="method-start">103927 ms</span>
+                <span class="method-start">99900 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">quit</span>
-                <span class="method-start">160937 ms</span>
+                <span class="method-start">140631 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">SystemMailTracking.testcases.SystemEmails.BroadCastEmailTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">init</span>
-                <span class="method-start">161747 ms</span>
+                <span class="method-start">141589 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">initTest</span>
-                <span class="method-start">161788 ms</span>
+                <span class="method-start">141618 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">BroadCastEmail({GmailPassword=password@12, BroadCastEmailTextContent=Test Content Automation, BroadcastEmailAddress...)</span>
-                <span class="method-start">161789 ms</span>
+                <span class="method-start">141618 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">quit</span>
-                <span class="method-start">224320 ms</span>
+                <span class="method-start">193012 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">SystemMailTracking.testcases.SystemEmails.deletecontact</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">init</span>
-                <span class="method-start">225353 ms</span>
+                <span class="method-start">194276 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">initTest</span>
-                <span class="method-start">225482 ms</span>
+                <span class="method-start">194300 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">deletecontactTest({Runmode=Y, Email=automationcontact1@mailinator.com, Browser=Chrome})</span>
-                <span class="method-start">225482 ms</span>
+                <span class="method-start">194300 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">quit</span>
-                <span class="method-start">268439 ms</span>
+                <span class="method-start">235539 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
