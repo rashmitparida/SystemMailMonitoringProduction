@@ -6,21 +6,10 @@
     </classes>
 </test>
 
-<test name="ForgotPassword">
-    <classes>
-        <class name="SystemMailTracking.testcases.SessionSuite.ForgotPasswordTestCase" ></class>  
-    </classes>
-</test>
 
 <test name="CreateNewAccount">
     <classes>
         <class name="SystemMailTracking.testcases.SessionSuite.CreateNewAccountTest" ></class>  
-    </classes>
-</test>
-
-<test name="deleteTrialuser">
-    <classes>
-        <class name="SystemMailTracking.testcases.SessionSuite.deleteTrialuser" ></class>  
     </classes>
 </test>
 

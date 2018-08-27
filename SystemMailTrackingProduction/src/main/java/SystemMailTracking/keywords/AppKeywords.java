@@ -121,7 +121,7 @@ public class AppKeywords extends GenericKeywords{
 		try
 		{
 			test.log(Status.INFO, "Validating forgot password email in mailinator");
-			type("MailinatorMailinput_xpath","Email");
+			/*type("MailinatorMailinput_xpath","Email");
 			waitForPageToLoad();
 			click("MailinatorGoButton_xpath");
 			waitForPageToLoad();
@@ -130,11 +130,20 @@ public class AppKeywords extends GenericKeywords{
 			waitForPageToLoad();
 			click("MailinatorResetPasswordLink_xpath");
 			Thread.sleep(2000);
-			click("MailinatorForgotPasswordMail_xpath");
+			click("MailinatorForgotPasswordMail_xpath");*/
 			
+			type("GmailUsername_xpath","Email");
+			click("GmailNextButton_xpath");
+			type("GmailPassword_xpath","GmailPassword");
+			click("GmailPasswordNextButton_xpath");
+			Thread.sleep(5000);
+			click("GmailInboxFirstMessage_xpath");
+			int size = driver.findElements(By.tagName("iframe")).size();
+		    // prints the total number of frames inside outer frame           
+		    System.out.println("Total Frames --" + size);
 			//Switch to iframe and locate the element
-			driver.switchTo().frame(1);
-			click("ChangePasswordLink_xpath");
+			//driver.switchTo().frame(1);
+			driver.findElement(By.linkText("Click here to change your password. ")).click();
 			
 			//Get the list of window handles
 			ArrayList<String> newTab = new ArrayList<String>(driver.getWindowHandles());
@@ -160,14 +169,14 @@ public class AppKeywords extends GenericKeywords{
 		try
 		{
 		test.log(Status.INFO, "Validating forgot password email in mailinator");
-		type("MailinatorMailinput_xpath","Email");
-		click("MailinatorGoButton_xpath");
-		waitForPageToLoad();
-		type("Mailinatormailinput_xpath","Email");
-		click("MailinatorfilterinboxmailButton_xpath");
-		click("MailinatorResetPasswordLink_xpath");
+		type("GmailUsername_xpath","Email");
+		click("GmailNextButton_xpath");
+		type("GmailPassword_xpath","GmailPassword");
+		click("GmailPasswordNextButton_xpath");
 		Thread.sleep(5000);
-		String Password_Changed = driver.findElement(By.xpath("//*[@class='single_mail']//ul/li[1]/div/div[4]")).getText();
+		String Password_Changed = driver.findElement(By.xpath("//*[@class='UI']/div[1]/div[1]//div[@class='Cp']//table/tbody/tr[1]//td[6]/div/div/div/span/span")).getText();
+		click("GmailInboxFirstMessage_xpath");
+		Thread.sleep(5000);
 		test.log(Status.INFO, "Reset Password Notification sent successfully with Subject : " + Password_Changed);
 		
 		}
@@ -312,25 +321,14 @@ public class AppKeywords extends GenericKeywords{
 		try
 		{
 		test.log(Status.INFO, "Validating Newly created account confirmation link has been emailed in mailinator");
-		type("MailinatorMailinput_xpath","Email");
-		waitForPageToLoad();
-		click("MailinatorGoButton_xpath");
-		waitForPageToLoad();
-		type("Mailinatormailinput_xpath","Email");
-		click("MailinatorfilterinboxmailButton_xpath");
-		waitForPageToLoad();
-		click("MailinatorAccountmail_xpath");
-		String Count = driver.findElement(By.xpath("//*[@id='InboxCtrl']/section/div/div[2]/ul/li[1]/ul/li[1]//div[@class='ng-binding']")).getText();
-		if(Count != null)
-		{
-			test.log(Status.INFO, "Newly created account confirmation link has been emailed successfully with email count in inbox : " +Count);
-		}
-		else
-			
-		test.log(Status.INFO, "Newly created account confirmation link has not been emailed to the user");
-		Thread.sleep(4000);
-		click("MailinatorNewAccountMail_xpath");
-		test.log(Status.INFO, "Newly created account confirmation link has been emailed successfully");
+		type("GmailUsername_xpath","Email");
+		click("GmailNextButton_xpath");
+		type("GmailPassword_xpath","GmailPassword");
+		click("GmailPasswordNextButton_xpath");
+		Thread.sleep(5000);
+		String NewAccountEmail = driver.findElement(By.xpath("//*[@class='UI']/div[1]/div[1]//div[@class='Cp']//table/tbody/tr[1]//td[6]/div/div/div/span/span")).getText();
+		click("GmailInboxFirstMessage_xpath");
+		test.log(Status.INFO, "Newly created account confirmation link has been emailed to the user successfully: " + NewAccountEmail);
 		}
 		
 		catch (Throwable t)
@@ -410,16 +408,13 @@ public class AppKeywords extends GenericKeywords{
 		try
 		{
 		test.log(Status.INFO, "Validating Opt-in email in mailinator");
-		type("MailinatorMailinput_xpath","Email");
-		click("MailinatorGoButton_xpath");
-		waitForPageToLoad();
-		type("Mailinatormailinput_xpath","Email");
-		click("MailinatorfilterinboxmailButton_xpath");
-		waitForPageToLoad();
-		click("MailinatorContactInbox_xpath");
+		type("GmailUsername_xpath","Email");
+		click("GmailNextButton_xpath");
+		type("GmailPassword_xpath","GmailPassword");
+		click("GmailPasswordNextButton_xpath");
 		Thread.sleep(5000);
-		String Optin_Mail = driver.findElement(By.xpath("//*[@id='InboxCtrl']/section/div/div[2]/ul/li[1]/ul/li[1]/div/div[2]")).getText();
-		System.out.println("Optin email has been sent as in the mailinator there are " + Optin_Mail + " email");
+		String Optin_Mail = driver.findElement(By.xpath("//*[@class='UI']/div[1]/div[1]//div[@class='Cp']//table/tbody/tr[1]//td[6]/div/div/div/span/span")).getText();
+		test.log(Status.INFO,"Optin email has been sent successfully, verified the mail subject in inbox " + Optin_Mail);
 		/*if(Optin_Mail.equals(1))
 			test.log(Status.INFO, "Optin email has been sent successfully");
 		else
@@ -471,14 +466,13 @@ public class AppKeywords extends GenericKeywords{
 		try
 		{
 		test.log(Status.INFO, "Validating ReOpt-in email in mailinator");
-		type("MailinatorMailinput_xpath","Email");
-		click("MailinatorGoButton_xpath");
-		waitForPageToLoad();
-		type("Mailinatormailinput_xpath","Email");
-		click("MailinatorfilterinboxmailButton_xpath");
-		click("MailinatorContactInbox_xpath");
+		type("GmailUsername_xpath","Email");
+		click("GmailNextButton_xpath");
+		type("GmailPassword_xpath","GmailPassword");
+		click("GmailPasswordNextButton_xpath");
 		Thread.sleep(5000);
-		click("MailinatorInboxMail_xpath");
+		String ReOptin_Mail = driver.findElement(By.xpath("//*[@class='UI']/div[1]/div[1]//div[@class='Cp']//table/tbody/tr[1]//td[6]/div/div/div/span/span")).getText();
+		test.log(Status.INFO," Re-Optin email has been sent successfully, verified the mail subject in inbox " + ReOptin_Mail);
 		//String Reoptin_Mail=driver.findElement(By.xpath("//*[@id='InboxCtrl']/section/div/div[2]/ul/li[1]/ul/li/div/div[2]")).getText();
 		//System.out.println("Reoptin email has been sent as in the mailinator there are  " + Reoptin_Mail + " emails");
 		/*if(Reoptin_Mail.equals(1))
@@ -528,9 +522,11 @@ public class AppKeywords extends GenericKeywords{
 		type("GmailPassword_xpath","GmailPassword");
 		click("GmailPasswordNextButton_xpath");
 		Thread.sleep(5000);
+		//driver.findElement(By.xpath("//a[@href='https://mail.google.com/mail/u/1/#inbox']"));
 		//click("GmailInboxclick_xpath");
 		//Thread.sleep(5000);
 		click("GmailInboxFirstMessage_xpath");
+		Thread.sleep(2000);
 		/*type("MailinatorMailinput_xpath","Email");
 		click("MailinatorGoButton_xpath");
 		click("MailinatorInbox_xpath");
@@ -624,6 +620,7 @@ public class AppKeywords extends GenericKeywords{
 			waitForPageToLoad();
 			Thread.sleep(10000);
 			click("DeleteContact_xpath");
+			Thread.sleep(5000);
 			//Confirm from the dialog box by pressing Enter key through selenium
 			driver.findElement(By.xpath("//button[@class='btn btn-primary']")).sendKeys(Keys.ENTER);
 			test.log(Status.INFO, "Deleted the recently added contact successfully");
@@ -638,20 +635,21 @@ public class AppKeywords extends GenericKeywords{
 	{
 		try
 		{
-			test.log(Status.INFO, "Delete the recently added trial user");
-			click("RFManageAccounts_xpath");
-			waitForPageToLoad();
-			type("RFSearchAccounts_xpath","Account Name");
-			waitForPageToLoad();
-			Thread.sleep(15000);
-			click("RFAccountUsersIcon_xpath");
+			test.log(Status.INFO, "Delete the recently added trial user");	
+			//click("RFManageAccounts_xpath");
+			//waitForPageToLoad();
+			driver.get("https://my.rapidfunnel.com/admin/accounts/edit/id/6");
+			//Thread.sleep(5000);
+			//type("RFSearchAccounts_xpath","Account Name");
+			//Thread.sleep(15000);
+			//click("RFAccountUsersIcon_xpath");
 			click("RFAccountManageUserButton_xpath");
-			waitForPageToLoad();
 			type("RFAccountUsers_xpath","Email");
 			waitForPageToLoad();
 			click("UserdetailIcon_xpath");
-			click("DeletetrialuserButton_xpath");
 			waitForPageToLoad();
+			click("DeletetrialuserButton_xpath");
+			//Confirm from the dialog box by pressing Enter key through selenium
 			driver.findElement(By.xpath("//button[@class='btn btn-primary']")).sendKeys(Keys.ENTER);
 			test.log(Status.INFO, "Deleted the trial user successfully");
 		}	

@@ -31,5 +31,11 @@
     </classes>
 </test>
 
+<test name="Delete Trial User">
+    <classes>
+        <class name="SystemMailTracking.testcases.SystemEmails.deleteTrialuser" ></class>  
+    </classes>
+</test>
+
 </suite>
 
