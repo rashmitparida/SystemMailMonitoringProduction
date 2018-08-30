@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [SessionSuite]">
-  <test thread-count="5" name="ForgotPassword(failed)">
+  <test thread-count="5" name="Login Test(failed)">
     <classes>
       <class name="SystemMailTracking.testcases.SessionSuite.ForgotPasswordTestCase">
         <methods>
@@ -12,5 +12,5 @@
         </methods>
       </class> <!-- SystemMailTracking.testcases.SessionSuite.ForgotPasswordTestCase -->
     </classes>
-  </test> <!-- ForgotPassword(failed) -->
+  </test> <!-- Login Test(failed) -->
 </suite> <!-- Failed suite [SessionSuite] -->

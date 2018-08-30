@@ -14,6 +14,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+
 import com.aventstack.extentreports.Status;
 
 
@@ -58,14 +59,24 @@ public class AppKeywords extends GenericKeywords{
 		getObject("RFloginButton_xpath").click();
 		test.log(Status.INFO, "Logging in with "+ data.get("Username")+"/"+data.get("Password"));
 	
-		/*test.log(Status.INFO, "Logging in RF Admin"); 
-		type("RFuserName_xpath","Username");
-		type("RFpassword_xpath","Password");
-		click("RFloginButton_xpath");
-		test.log(Status.INFO, "Logging in with "+ data.get("Username")+"/"+data.get("Password"));
-	*/
 	}
+	
+	public void testaccount()
+	{
+
+		test.log(Status.INFO, "Logging in"); 
+		String username="";
+		String password="";
 		
+		username=envProp.getProperty("testusername");
+		password=envProp.getProperty("testpassword");
+		
+		getObject("userName_xpath").sendKeys(username);
+		getObject("password_xpath").sendKeys(password);
+		getObject("loginButton_xpath").click();
+		test.log(Status.INFO, "Logging in with valid credential for testaccount");
+	
+	}
 	public void defaultLogin(){
 		test.log(Status.INFO, "Logging in with default ID");
 
@@ -121,30 +132,22 @@ public class AppKeywords extends GenericKeywords{
 		try
 		{
 			test.log(Status.INFO, "Validating forgot password email in mailinator");
-			/*type("MailinatorMailinput_xpath","Email");
-			waitForPageToLoad();
-			click("MailinatorGoButton_xpath");
-			waitForPageToLoad();
-			type("Mailinatormailinput_xpath","Email");
-			click("MailinatorfilterinboxmailButton_xpath");
-			waitForPageToLoad();
-			click("MailinatorResetPasswordLink_xpath");
-			Thread.sleep(2000);
-			click("MailinatorForgotPasswordMail_xpath");*/
-			
-			type("GmailUsername_xpath","Email");
-			click("GmailNextButton_xpath");
-			type("GmailPassword_xpath","GmailPassword");
-			click("GmailPasswordNextButton_xpath");
+			click("YahoomailIcon_xpath");	
+			type("YahooUsername_xpath","Email");
+			click("YahooMailNextButton_xpath");
+			type("YahooPassword_xpath","YahooPassword");
+			click("YahooSignInButton_xpath");
 			Thread.sleep(5000);
-			click("GmailInboxFirstMessage_xpath");
+			click("YahooPasswordNotification_xpath");
+			Thread.sleep(2000);
 			int size = driver.findElements(By.tagName("iframe")).size();
 		    // prints the total number of frames inside outer frame           
 		    System.out.println("Total Frames --" + size);
 			//Switch to iframe and locate the element
 			//driver.switchTo().frame(1);
-			driver.findElement(By.linkText("Click here to change your password. ")).click();
-			
+			driver.findElement(By.xpath("//a[text()='Click here to change your password. ']")).click();
+			String print = driver.findElement(By.xpath("//a[text()='Click here to change your password. ']")).getText();
+			System.out.println("Print text :" +print);
 			//Get the list of window handles
 			ArrayList<String> newTab = new ArrayList<String>(driver.getWindowHandles());
 			System.out.println(newTab.size());
@@ -152,6 +155,7 @@ public class AppKeywords extends GenericKeywords{
 			Thread.sleep(5000);
 			test.log(Status.INFO, "Validating Reset password");
 			waitForPageToLoad();
+			Thread.sleep(5000);
 			type("ResetNewPassword_xpath","NewPassword");
 			type("ResetConfirmPassword_xpath","ConfirmPassword");
 			click("ResetSaveButton_xpath");
@@ -169,15 +173,22 @@ public class AppKeywords extends GenericKeywords{
 		try
 		{
 		test.log(Status.INFO, "Validating forgot password email in mailinator");
-		type("GmailUsername_xpath","Email");
-		click("GmailNextButton_xpath");
-		type("GmailPassword_xpath","GmailPassword");
-		click("GmailPasswordNextButton_xpath");
+		click("YahoomailIcon_xpath");	
+		type("YahooUsername_xpath","Email");
+		click("YahooMailNextButton_xpath");
+		type("YahooPassword_xpath","YahooPassword");
+		click("YahooSignInButton_xpath");
 		Thread.sleep(5000);
-		String Password_Changed = driver.findElement(By.xpath("//*[@class='UI']/div[1]/div[1]//div[@class='Cp']//table/tbody/tr[1]//td[6]/div/div/div/span/span")).getText();
-		click("GmailInboxFirstMessage_xpath");
-		Thread.sleep(5000);
+		String Password_Changed = driver.findElement(By.xpath("//span[@title='Password Changed']")).getText();
+		//click("YahooPasswordChanged_xpath");
 		test.log(Status.INFO, "Reset Password Notification sent successfully with Subject : " + Password_Changed);
+		Thread.sleep(5000);
+		//click("YahooInbox_xpath");
+		click("SelectYahoomailbutton_xpath");
+		click("YahooAll_xpath");
+		Thread.sleep(2000);
+		click("YahooMailDeleteButton_xpath");
+		click("YahooOkModalButton_xpath");		
 		
 		}
 		
@@ -329,6 +340,13 @@ public class AppKeywords extends GenericKeywords{
 		String NewAccountEmail = driver.findElement(By.xpath("//*[@class='UI']/div[1]/div[1]//div[@class='Cp']//table/tbody/tr[1]//td[6]/div/div/div/span/span")).getText();
 		click("GmailInboxFirstMessage_xpath");
 		test.log(Status.INFO, "Newly created account confirmation link has been emailed to the user successfully: " + NewAccountEmail);
+		Thread.sleep(5000);
+		click("BacktoInboxGmailIcon_xpath");
+		click("SelectEmailCheckbox_xpath");
+		Thread.sleep(2000);
+		click("GmailDeleteIcon_xpath");
+		Thread.sleep(2000);
+		test.log(Status.INFO,"Deleted all the emails from inbox to make it empty");
 		}
 		
 		catch (Throwable t)
@@ -387,7 +405,7 @@ public class AppKeywords extends GenericKeywords{
 		//Select the state as 'Opportunity Campaign' from the dropdowwn
  		Select campaignAlias = new Select(driver.findElement(By.id("campaign")));
  		//campaignAlias.selectByVisibleText("QA Test A Campaign");
- 		campaignAlias.selectByValue("9");
+ 		campaignAlias.selectByValue("348");
  		
  		click("ContactSaveButton_xpath");
  		verifyText("ContactCreationSuccessprod_xpath",data.get("ExpectedText"));
@@ -419,7 +437,13 @@ public class AppKeywords extends GenericKeywords{
 			test.log(Status.INFO, "Optin email has been sent successfully");
 		else
 			reportFailure("Could not find the Optin email");*/
-		
+		Thread.sleep(5000);
+		//click("BacktoInboxGmailIcon_xpath");
+		click("SelectEmailCheckbox_xpath");
+		Thread.sleep(2000);
+		click("GmailDeleteIcon_xpath");
+		Thread.sleep(2000);
+		test.log(Status.INFO,"Deleted all the emails from inbox to make it empty");
 		}
 		catch (Throwable t)
 		{
@@ -448,10 +472,8 @@ public class AppKeywords extends GenericKeywords{
 			//Confirm from the dialog box by pressing Enter key through selenium
 			driver.findElement(By.xpath("//button[@class='btn btn-primary']")).sendKeys(Keys.ENTER);
 			waitForPageToLoad();
-					
 			test.log(Status.INFO, "Reoptin Email is sent successfully");	
-			
-			
+					
 		 }
 		 catch (Throwable t)
 			{
@@ -480,6 +502,11 @@ public class AppKeywords extends GenericKeywords{
 		else
 			reportFailure("Could not find the Re-Optin email");*/
 		test.log(Status.INFO, "Found ReOpt-in email in mailinator");
+		click("SelectEmailCheckbox_xpath");
+		Thread.sleep(2000);
+		click("GmailDeleteIcon_xpath");
+		Thread.sleep(2000);
+		test.log(Status.INFO,"Deleted all the emails from inbox to make it empty");
 		}
 		catch (Throwable t)
 		{
@@ -538,6 +565,13 @@ public class AppKeywords extends GenericKeywords{
 		else
 			reportFailure("Could not find the Resource email");*/
 		test.log(Status.INFO, "Resource email is sent successfully");
+		Thread.sleep(5000);
+		click("BacktoInboxGmailIcon_xpath");
+		click("SelectEmailCheckbox_xpath");
+		Thread.sleep(2000);
+		click("GmailDeleteIcon_xpath");
+		Thread.sleep(2000);
+		test.log(Status.INFO,"Deleted all the emails from inbox to make it empty");
 		
 		}
 		catch (Throwable t)
@@ -593,7 +627,7 @@ public class AppKeywords extends GenericKeywords{
 			Thread.sleep(5000);
 			//click("GmailInboxclick_xpath");
 			//Thread.sleep(5000);
-			click("GmailInboxFirstMessage_xpath");
+			//click("GmailInboxFirstMessage_xpath");
 			/*click("GmailInboxclick_xpath");
 			Thread.sleep(5000);
 			waitForPageToLoad();
@@ -623,6 +657,7 @@ public class AppKeywords extends GenericKeywords{
 			Thread.sleep(5000);
 			//Confirm from the dialog box by pressing Enter key through selenium
 			driver.findElement(By.xpath("//button[@class='btn btn-primary']")).sendKeys(Keys.ENTER);
+			Thread.sleep(2000);
 			test.log(Status.INFO, "Deleted the recently added contact successfully");
 		}
 		catch (Throwable t)
@@ -638,19 +673,21 @@ public class AppKeywords extends GenericKeywords{
 			test.log(Status.INFO, "Delete the recently added trial user");	
 			//click("RFManageAccounts_xpath");
 			//waitForPageToLoad();
-			driver.get("https://my.rapidfunnel.com/admin/accounts/edit/id/6");
+			driver.get("https://my.rapidfunnel.com/admin/account-users/index/accid/6");
 			//Thread.sleep(5000);
 			//type("RFSearchAccounts_xpath","Account Name");
 			//Thread.sleep(15000);
 			//click("RFAccountUsersIcon_xpath");
-			click("RFAccountManageUserButton_xpath");
+			//click("RFAccountManageUserButton_xpath");
 			type("RFAccountUsers_xpath","Email");
 			waitForPageToLoad();
 			click("UserdetailIcon_xpath");
 			waitForPageToLoad();
 			click("DeletetrialuserButton_xpath");
+			Thread.sleep(2000);
 			//Confirm from the dialog box by pressing Enter key through selenium
 			driver.findElement(By.xpath("//button[@class='btn btn-primary']")).sendKeys(Keys.ENTER);
+			Thread.sleep(2000);
 			test.log(Status.INFO, "Deleted the trial user successfully");
 		}	
 		catch (Throwable t)

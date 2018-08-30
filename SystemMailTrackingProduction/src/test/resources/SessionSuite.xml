@@ -2,7 +2,7 @@
 <suite name="SessionSuite" >
 <test name="Login Test">
     <classes>
-        <class name="SystemMailTracking.testcases.SessionSuite.LoginTest" ></class>  
+        <class name="SystemMailTracking.testcases.SessionSuite.ForgotPasswordTestCase" ></class>  
     </classes>
 </test>
 
